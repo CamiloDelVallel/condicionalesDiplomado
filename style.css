@@ -1,0 +1,26 @@
+.ejercicios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    background-color: #425F57;
+    color: #CFFF8D;
+    width: 80%;
+    height: 200px;
+    text-align: center;
+    line-height: 50px;
+    margin: 0px;
+}
+
+h2{
+    background-color: #749F82;
+    color: #A8E890;
+    width: 80%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin: 10px;
+
+}
