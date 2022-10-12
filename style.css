@@ -30,7 +30,7 @@ p{
     width: 80%;
 }
 
-#primoResultado, #primoFibonacciResultado, #result{
+#primoResultado, #primoFibonacciResultado, #result, #result2{
     color: red;
 }
 
@@ -43,6 +43,10 @@ p{
 .tiempos input{
     margin: 4px;
 
+}
+
+.inputCal{
+    margin: 4px;
 }
 @media (max-width: 630px) {
     h1{

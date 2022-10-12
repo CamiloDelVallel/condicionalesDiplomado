@@ -113,13 +113,38 @@ function apto(){
 
 // 4. Obtener el promedio de calificaciones de un grupo de n alumnos.
 
-function promedio(calificaciones){
-    let resultado = 0;
-    for (let i = 0; i < calificaciones.length; i++) {
-        resultado = resultado + calificaciones[i]
+let cantidadAlumnos = document.getElementById('cantidad-alumnos');
+let grupos = document.getElementById('grupos');
+let inputGrupos = document.createElement('input');
+let promedio = document.getElementById('promedio');
+let result2 = document.getElementById('result2');
+
+cantidadAlumnos.addEventListener('click', lineas);
+promedio.addEventListener('click', promedio2);
+
+// grupos.appendChild(inputGrupos);
+// grupos.appendChild(inputGrupos);
+// grupos.appendChild(inputGrupos);
+
+function lineas(){
+    c = Number(prompt("Ingrese la cantidad de alumnos"));
+    for (let i = 1; i <= c; i++) {
+        console.log(c);
+        grupos.appendChild(inputGrupos);
     }
-    let prom = resultado / calificaciones.length;
-    console.log("El promedio de califincaciones del grupo es: " + prom);
+}
+
+function promedio2(){
+    let cal1 = 4;
+    let cal2 = 6;
+    let resultado2 = ((cal1 + cal2)/2);
+    console.log(resultado2)
+    // for (let i = 0; i < calificaciones.length; i++) {
+    //     resultado = resultado + calificaciones[i]
+    // }
+    // let prom = resultado / calificaciones.length;
+    result2.innerText = "El promedio de califincaciones del grupo es: " + resultado2; 
+    //console.log("El promedio de califincaciones del grupo es: " + resultado2);
 }
 
 // promedio([3,4,5,4.5,3.8]);
