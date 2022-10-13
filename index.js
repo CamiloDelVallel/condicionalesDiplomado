@@ -117,34 +117,53 @@ let cantidadAlumnos = document.getElementById('cantidad-alumnos');
 let grupos = document.getElementById('grupos');
 let inputGrupos = document.createElement('input');
 let promedio = document.getElementById('promedio');
-let result2 = document.getElementById('result2');
-
+let result4 = document.getElementById('result4');
+let input = document.getElementsByTagName('input');
 cantidadAlumnos.addEventListener('click', lineas);
 promedio.addEventListener('click', promedio2);
 
-// grupos.appendChild(inputGrupos);
-// grupos.appendChild(inputGrupos);
-// grupos.appendChild(inputGrupos);
-
+let c;
 function lineas(){
     c = Number(prompt("Ingrese la cantidad de alumnos"));
     for (let i = 1; i <= c; i++) {
-        console.log(c);
-        grupos.appendChild(inputGrupos);
+        let idInput = grupos.appendChild(document.createElement('input'));
+        idInput.id = 'alumn'+i;
+        idInput.type = 'number';
     }
 }
 
+let alumno1 = document.getElementById('alumn1');
+let alumno2 = document.getElementById('alumn2');
+let alumno3 = document.getElementById('alumn3');
+let alumno4 = document.getElementById('alumn4');
+let alumno5 = document.getElementById('alumn5');
+let alumno6 = document.getElementById('alumn6');
+let alumno7 = document.getElementById('alumn7');
+let alumno8 = document.getElementById('alumn8');
+let alumno9 = document.getElementById('alumn9');
+let alumno10 = document.getElementById('alumn10');
+
 function promedio2(){
-    let cal1 = 4;
-    let cal2 = 6;
-    let resultado2 = ((cal1 + cal2)/2);
+    let cal1 = Number(alumno1);
+    console.log(Number(alumno1));
+    console.log(cal1);
+    let cal2 = Number(alumno2);
+    let cal3 = Number(alumno3);
+    let cal4 = Number(alumno4);
+    let cal5 = Number(alumno5);
+    let cal6 = Number(alumno6);
+    let cal7 = Number(alumno7);
+    let cal8 = Number(alumno8);
+    let cal9 = Number(alumno9);
+    let cal10 = Number(alumno10);
+    let resultado2 = ((cal1 + cal2 + cal3 + cal4 + cal5 + cal6 + cal7 + cal8 + cal9 + cal10)/c);
     console.log(resultado2)
     // for (let i = 0; i < calificaciones.length; i++) {
     //     resultado = resultado + calificaciones[i]
     // }
     // let prom = resultado / calificaciones.length;
-    result2.innerText = "El promedio de califincaciones del grupo es: " + resultado2; 
-    //console.log("El promedio de califincaciones del grupo es: " + resultado2);
+    result4.innerText = "El promedio de calificaciones del grupo es: " + resultado2; 
+    console.log("El promedio de califincaciones del grupo es: " + resultado2);
 }
 
 // promedio([3,4,5,4.5,3.8]);
@@ -304,6 +323,76 @@ Proceso RegistroDeVentas
     Escribir "Valor de total de ventas: ", total_de_ventas;
 FinProceso
 */
+const cliente1 = document.getElementById('cliente-1');
+const cliente2 = document.getElementById('cliente-2');
+const cliente3 = document.getElementById('cliente-3');
+const cliente4 = document.getElementById('cliente-4');
+const cliente5 = document.getElementById('cliente-5');
+const cliente6 = document.getElementById('cliente-6');
+const cliente7 = document.getElementById('cliente-7');
+const cliente8 = document.getElementById('cliente-8');
+const botonTienda = document.getElementById('boton-tienda');
+const totalVentas = document.getElementById('total-ventas');
+const cantidadVentas = document.getElementById('cantidad-ventas');
+
+botonTienda.addEventListener('click', ventas);
+
+
+
+function ventas(){
+    let cl1 = Number(cliente1.value);
+    let cl2 = Number(cliente2.value);
+    let cl3 = Number(cliente3.value);
+    let cl4 = Number(cliente4.value);
+    let cl5 = Number(cliente5.value);
+    let cl6 = Number(cliente6.value);
+    let cl7 = Number(cliente7.value);
+    let cl8 = Number(cliente8.value);
+    let total9;
+    total9 = (cl1 + cl2 + cl3 + cl4 + cl5 + cl6 + cl7 + cl8);
+    totalVentas.innerHTML='El total de ventas es: ' + total9;
+    numVentas();
+}
+
+function numVentas(){
+    let numClientes = 0;
+    let cl1 = Number(cliente1.value);
+    let cl2 = Number(cliente2.value);
+    let cl3 = Number(cliente3.value);
+    let cl4 = Number(cliente4.value);
+    let cl5 = Number(cliente5.value);
+    let cl6 = Number(cliente6.value);
+    let cl7 = Number(cliente7.value);
+    let cl8 = Number(cliente8.value);
+
+    if(cl1 !== 0){
+        numClientes = numClientes + 1;
+    }
+    if(cl2 !== 0){
+        numClientes = numClientes + 1;
+    }
+    if(cl3 !== 0){
+        numClientes = numClientes + 1;
+    }
+    if(cl4 !== 0){
+        numClientes = numClientes + 1;
+    }
+    if(cl5 !== 0){
+        numClientes = numClientes + 1;
+    }
+    if(cl6 !== 0){
+        numClientes = numClientes + 1;
+    }
+    if(cl7 !== 0){
+        numClientes = numClientes + 1;
+    }
+    if(cl8 !== 0){
+        numClientes = numClientes + 1;
+    }
+    //return numClientes;
+    cantidadVentas.innerText='La cantidad de ventas es: ' + numClientes;
+}
+
 
 // 9. Un jefe de casilla desea determinar cuántas personas de cada una de las secciones que componen su zona asisten el día de las votaciones. Las secciones son: norte, sur y centro. También desea determinar cuál es la sección con mayor número de votantes.
 
