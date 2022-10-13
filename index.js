@@ -263,16 +263,21 @@ function pagar(articulos, valorArticulo, descuento){
 // 7. Calcular la suma siguiente:
 // 	100 + 98 + 96 + 94 + . . . + 0 en este orden
 
+let calculo = document.getElementById('suma-100-0');
+let resultado7 = document.getElementById('result7');
+calculo.addEventListener('click', suma);
 
 function suma(n){
+    n = 100;
     let parcial=0;
-    for (let i = n; i >= 0; i--) {
+    for (let i = n; i >= 0; i-=2) {
         parcial = parcial + i;
-}
-    // console.log(parcial);
+    }
+    resultado7.innerText = "El resultado es: " + parcial; 
+    console.log(parcial);
 }
 
-// suma(100);
+//suma(100);
 // suma(10);
 // suma(4);
 
@@ -280,33 +285,90 @@ function suma(n){
 
 // 8. Suponga que tiene usted una tienda y desea registrar las ventas en su computadora. Diseñe un algoritmo que lea por cada cliente, el monto total de su compra. Al final del día que escriba la cantidad total de ventas y el número de clientes atendidos.
 
-
+/*
+Proceso RegistroDeVentas
+    clientes_atendidos <- 0;
+    total_de_ventas <- 0;
+    Repetir
+        Escribir Sin Saltar "Ingresa el valor de total de la compra:";
+        Leer total_de_la_compra;
+        total_de_ventas <- total_de_ventas+total_de_la_compra;
+        clientes_atendidos <- clientes_atendidos+1;
+        Escribir "";
+        Repetir
+            Escribir Sin Saltar "¿Deseas repetir el proceso? (S/N):";
+            Leer tecla_repetir;
+        Hasta Que tecla_repetir='s' O tecla_repetir='n' O tecla_repetir='S' O tecla_repetir='N'
+    Hasta Que tecla_repetir='n' O tecla_repetir='N'
+    Escribir "Valor de clientes atendidos: ", clientes_atendidos;
+    Escribir "Valor de total de ventas: ", total_de_ventas;
+FinProceso
+*/
 
 // 9. Un jefe de casilla desea determinar cuántas personas de cada una de las secciones que componen su zona asisten el día de las votaciones. Las secciones son: norte, sur y centro. También desea determinar cuál es la sección con mayor número de votantes.
 
-function votantes(secciones){
-    let sumaNorte = 0;
-    let sumaSur = 0;
-    let sumaCentro = 0;
-    for (let i = 0; i <= secciones.length; i++) {
-        if(secciones[i] == 'norte'){
-            sumaNorte = sumaNorte + 1;
-        } else if (secciones[i] == 'sur'){
-            sumaSur = sumaSur + 1;
-        } else if (secciones[i] == 'centro'){
-            sumaCentro = sumaCentro + 1;
-        }
-    }
-    // console.log('Total norte = ' + sumaNorte)
-    // console.log('Total sur = ' + sumaSur)
-    // console.log('Total centro = ' + sumaCentro)
-    if(sumaNorte>sumaSur && sumaNorte>sumaCentro){
-        // console.log('El norte tiene la mayor cantidad de votantes')
-    } else if(sumaSur>sumaNorte && sumaSur>sumaCentro){
-        // console.log('El sur tiene la mayor cantidad de votantes')
-    } else {
-    // console.log('El centro tiene la mayor cantidad de votantes')
+const norte = document.getElementById('norte');
+const sur = document.getElementById('sur');
+const centro = document.getElementById('centro');
+const result9 = document.getElementById('result9');
+const result91 = document.getElementById('result91');
+const votacionResultado = document.getElementById('votacion-resultado');
+norte.addEventListener('click', sumaNorte);
+sur.addEventListener('click', sumaSur);
+centro.addEventListener('click', sumaCentro);
+votacionResultado.addEventListener('click', votantes);
+
+let sumarNorte = 0;
+let sumarSur = 0;
+let sumarCentro = 0;
+
+function sumaNorte(){
+    sumarNorte = sumarNorte + 1;
+    console.log(sumarNorte);
 }
+
+function sumaSur(){
+    sumarSur = sumarSur + 1;
+    console.log(sumarSur);
+
+}
+
+function sumaCentro(){
+    sumarCentro = sumarCentro + 1;
+    console.log(sumarCentro);
+
+}
+
+function votantes(){
+
+    // for (let i = 0; i <= secciones.length; i++) {
+    //     if(secciones[i] == 'norte'){
+    //         sumaNorte = sumaNorte + 1;
+    //     } else if (secciones[i] == 'sur'){
+    //         sumaSur = sumaSur + 1;
+    //     } else if (secciones[i] == 'centro'){
+    //         sumaCentro = sumaCentro + 1;
+    //     }
+    // }
+
+    result9.innerHTML='Total norte = ' + sumarNorte + '   Total sur = ' + sumarSur +   '    Total centro = ' + sumarCentro;
+
+
+    // console.log('Total sur = ' + sumaSur);
+    // console.log('Total norte = ' + sumaNorte);
+    // console.log('Total centro = ' + sumaCentro);
+    if(sumarNorte > sumarSur && sumarNorte > sumarCentro){
+        result91.innerHTML='El norte tiene la mayor cantidad de votantes';
+        // console.log('El norte tiene la mayor cantidad de votantes')
+    } else if(sumarSur > sumarNorte && sumarSur > sumarCentro){
+        result91.innerHTML='El sur tiene la mayor cantidad de votantes';
+        // console.log('El sur tiene la mayor cantidad de votantes')
+    } else if(sumarCentro > sumarNorte && sumarCentro > sumarSur){
+        result91.innerHTML='El centro tiene la mayor cantidad de votantes';
+    // console.log('El centro tiene la mayor cantidad de votantes')
+    } else {
+        result91.innerHTML='Dos o tres zonas están empatadas en la mayor cantidad de votantes';
+    }
 
 }
 
@@ -314,12 +376,23 @@ function votantes(secciones){
 
 // 10. Leer dos números y ver en la pantalla si están en orden crecientes o decrecientes
 
-function crecienteDecreciente(num1, num2){
+const number1 = document.getElementById('numero1');
+const number2 = document.getElementById('numero2');
+const botonCreciente = document.getElementById('creciente');
+const result10 = document.getElementById('result10');
+botonCreciente.addEventListener('click', crecienteDecreciente)
+
+
+function crecienteDecreciente(){
+    let num1 = Number(number1.value);
+    let num2 = Number(number2.value);
     if(num1 > num2){
-        // console.log('Están en forma decreciente')
+        result10.innerHTML='Están en forma decreciente';
     } else if (num1 < num2){
+        result10.innerHTML='Están en forma creciente';
         // console.log('Están en forma creciente')
     } else {
+        result10.innerHTML='Son iguales';
         // console.log('Son iguales')
     }
 }

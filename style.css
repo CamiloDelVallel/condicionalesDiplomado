@@ -30,7 +30,7 @@ p{
     width: 80%;
 }
 
-#primoResultado, #primoFibonacciResultado, #result, #result2{
+#primoResultado, #primoFibonacciResultado, #result, #result2, #result7, #result9, #result91,  #result10{
     color: red;
 }
 
@@ -47,6 +47,11 @@ p{
 
 .inputCal{
     margin: 4px;
+}
+
+footer{
+    text-align: center;
+    background-color: #749F82;
 }
 @media (max-width: 630px) {
     h1{
