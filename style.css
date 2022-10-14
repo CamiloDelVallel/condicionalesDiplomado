@@ -30,7 +30,7 @@ p{
     width: 80%;
 }
 
-#primoResultado, #primoFibonacciResultado, #result, #result2, #result7, #result9, #result91,  #result10, #total-ventas, #cantidad-ventas{
+#primoResultado, #primoFibonacciResultado, #result, #result2, #result4, #result5 ,  #result6, #result7, #result9, #result91,  #result10, #total-ventas, #cantidad-ventas{
     color: red;
 }
 
@@ -52,6 +52,29 @@ p{
 footer{
     text-align: center;
     background-color: #749F82;
+}
+
+.gruposColegio{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.grupoA{
+    margin: 20px;
+}
+
+.descuento{
+    display: flex;
+    flex-direction: row;
+}
+
+.sinodesc{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+
 }
 @media (max-width: 630px) {
     h1{

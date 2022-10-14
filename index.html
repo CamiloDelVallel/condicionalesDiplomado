@@ -56,11 +56,126 @@
         <h2>EJERCICIO 5</h2>
         <p>Se desea obtener el promedio de g grupos que están en un mismo año escolar; siendo que cada grupo puede tener n alumnos que cada alumno puede llevar m materias y que en todas las materias se promedian tres calificaciones para obtener el promedio de la materia. Lo que se desea desplegar es el promedio de los grupos, el promedio de cada grupo y el promedio de cada alumno.</p>
 
+        <div class="gruposColegio">
+            Grupos
+            <div class="grupoA">Grupo A
+                <div>Alumno 1</div>
+                    <div>Materia 1</div>
+                        <div>calificación 1
+                            <input type="number" id="gaa1m1c1">
+                        </div>
+                        <div>calificación 2
+                            <input type="number" id="gaa1m1c2">
+                        </div>
+                        <div>calificación 3
+                            <input type="number" id="gaa1m1c3">
+                        </div>
+                    <div>Materia 2</div>
+                        <div>calificación 1
+                            <input type="number" id="gaa1m2c1">
+                        </div>
+                        <div>calificación 2
+                            <input type="number" id="gaa1m2c2">
+                        </div>
+                        <div>calificación 3
+                            <input type="number" id="gaa1m2c3">
+                        </div>
+                <div>Alumno 2</div>
+                    <div>Materia 1</div>
+                        <div>calificación 1
+                            <input type="number" id="gaa2m1c1">
+                        </div>
+                        <div>calificación 2
+                            <input type="number" id="gaa2m1c2">
+                        </div>
+                        <div>calificación 3
+                            <input type="number" id="gaa2m1c3">
+                        </div>
+                    <div>Materia 2</div>
+                        <div>calificación 1
+                            <input type="number" id="gaa2m2c1">
+                        </div>
+                        <div>calificación 2
+                            <input type="number" id="gaa2m2c2">
+                        </div>
+                        <div>calificación 3
+                            <input type="number" id="gaa2m2c3">
+                        </div>
+            </div>
+            <div>Grupo B
+                <div>Alumno 1</div>
+                    <div>Materia 1</div>
+                        <div>calificación 1
+                            <input type="number" id="gba1m1c1">
+                        </div>
+                        <div>calificación 2
+                            <input type="number" id="gba1m1c2">
+                        </div>
+                        <div>calificación 3
+                            <input type="number" id="gba1m1c3">
+                        </div>
+                    <div>Materia 2</div>
+                        <div>calificación 1
+                            <input type="number" id="gba1m2c1">
+                        </div>
+                        <div>calificación 2
+                            <input type="number" id="gba1m2c2">
+                        </div>
+                        <div>calificación 3
+                            <input type="number" id="gba1m2c3">
+                        </div>
+                <div>Alumno 2</div>
+                    <div>Materia 1</div>
+                        <div>calificación 1
+                            <input type="number" id="gba2m1c1">
+                        </div>
+                        <div>calificación 2
+                            <input type="number" id="gba2m1c2">
+                        </div>
+                        <div>calificación 3
+                            <input type="number" id="gba2m1c3">
+                        </div>
+                    <div>Materia 2</div>
+                        <div>calificación 1
+                            <input type="number" id="gba2m2c1">
+                        </div>
+                        <div>calificación 2
+                            <input type="number" id="gba2m2c2">
+                        </div>
+                        <div>calificación 3
+                            <input type="number" id="gba2m2c3">
+                        </div>
+            </div>
+        </div>
+        
+        <button type="button"  id="calc-promedios">Calcular promedios</button>
+        <p id="result5"></p>
 
         
         <h2>EJERCICIO 6</h2>
         <p>6. Una persona que va de compras a la tienda “la rebaja.”, decide llevar un control sobre lo que va comprando, para saber la cantidad de dinero que tendrá que pagar al llegar a la caja. La tienda tiene una promoción del 20% de descuento sobre aquellos artículos cuya etiqueta sea roja. Determinar la cantidad de dinero que esta persona deberá pagar.
         </p>
+        <div class="descuento">
+            <form class="sinodesc" id="sinodesc">
+                Precio articulos sin descuento:
+                    <input type="number" id="sd1" placeholder="0">
+                    <input type="number" id="sd2" placeholder="0">
+                    <input type="number" id="sd3" placeholder="0">
+                    <input type="number" id="sd4" placeholder="0">
+                    <input type="number" id="sd5" placeholder="0">
+                <br>
+            </form>
+            <div class="sinodesc" id="sinodesc2">
+                Precio articulos con descuento:
+                <input type="number" id="cd1" placeholder="0">
+                <input type="number" id="cd2" placeholder="0">
+                <input type="number" id="cd3" placeholder="0">
+                <input type="number" id="cd4" placeholder="0">
+                <input type="number" id="cd5" placeholder="0">
+            </div>
+        </div>
+        <p>Subtotal (presione enter para confirmar el valor</p>
+        <p id="result6"></p>
 
         <h2>EJERCICIO 7</h2>
         <p>Calcular la suma siguiente:
@@ -75,7 +190,7 @@
             Diseñe un algoritmo que lea por cada cliente, el monto total de su compra.<br>
              Al final del día que escriba la cantidad total de ventas y el número de clientes atendidos.</p>
 
-        <input id="cliente-1" placeholder="Cliente 1">
+        <input type="number" id="cliente-1" placeholder="Cliente 1">
         <input type="number" id="cliente-2" placeholder="Cliente 2">
         <input type="number" id="cliente-3" placeholder="Cliente 3">
         <input type="number" id="cliente-4" placeholder="Cliente 4">

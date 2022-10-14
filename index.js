@@ -132,38 +132,42 @@ function lineas(){
     }
 }
 
-let alumno1 = document.getElementById('alumn1');
-let alumno2 = document.getElementById('alumn2');
-let alumno3 = document.getElementById('alumn3');
-let alumno4 = document.getElementById('alumn4');
-let alumno5 = document.getElementById('alumn5');
-let alumno6 = document.getElementById('alumn6');
-let alumno7 = document.getElementById('alumn7');
-let alumno8 = document.getElementById('alumn8');
-let alumno9 = document.getElementById('alumn9');
-let alumno10 = document.getElementById('alumn10');
-
 function promedio2(){
-    let cal1 = Number(alumno1);
-    console.log(Number(alumno1));
-    console.log(cal1);
-    let cal2 = Number(alumno2);
-    let cal3 = Number(alumno3);
-    let cal4 = Number(alumno4);
-    let cal5 = Number(alumno5);
-    let cal6 = Number(alumno6);
-    let cal7 = Number(alumno7);
-    let cal8 = Number(alumno8);
-    let cal9 = Number(alumno9);
-    let cal10 = Number(alumno10);
-    let resultado2 = ((cal1 + cal2 + cal3 + cal4 + cal5 + cal6 + cal7 + cal8 + cal9 + cal10)/c);
-    console.log(resultado2)
+    let cal1 = Number(alumn1.value);
+    let resultado2 = ((cal1)/c);
+    result4.innerText = "El promedio de calificaciones del grupo es: " + resultado2; 
+    let cal2 = Number(alumn2.value);
+    resultado2 = ((cal1 + cal2)/c);
+    result4.innerText = "El promedio de calificaciones del grupo es: " + resultado2; 
+    let cal3 = Number(alumn3.value);
+    resultado2 = ((cal1 + cal2 + cal3)/c);
+    result4.innerText = "El promedio de calificaciones del grupo es: " + resultado2; 
+    let cal4 = Number(alumn4.value);
+    resultado2 = ((cal1 + cal2 + cal3 + cal4)/c);
+    result4.innerText = "El promedio de calificaciones del grupo es: " + resultado2; 
+    let cal5 = Number(alumn5.value);
+    resultado2 = ((cal1 + cal2 + cal3 + cal4 + cal5)/c);
+    result4.innerText = "El promedio de calificaciones del grupo es: " + resultado2; 
+    let cal6 = Number(alumn6.value);
+    resultado2 = ((cal1 + cal2 + cal3 + cal4 + cal5 + cal6)/c);
+    result4.innerText = "El promedio de calificaciones del grupo es: " + resultado2; 
+    let cal7 = Number(alumn7.value);
+    resultado2 = ((cal1 + cal2 + cal3 + cal4 + cal5 + cal6 + cal7 )/c);
+    result4.innerText = "El promedio de calificaciones del grupo es: " + resultado2; 
+    let cal8 = Number(alumn8.value);
+    resultado2 = ((cal1 + cal2 + cal3 + cal4 + cal5 + cal6 + cal7 + cal8)/c);
+    result4.innerText = "El promedio de calificaciones del grupo es: " + resultado2; 
+    let cal9 = Number(alumn9.value);
+    resultado2 = ((cal1 + cal2 + cal3 + cal4 + cal5 + cal6 + cal7 + cal8 + cal9)/c);
+    result4.innerText = "El promedio de calificaciones del grupo es: " + resultado2; 
+    let cal10 = Number(alumn10.value);
+    resultado2 = ((cal1 + cal2 + cal3 + cal4 + cal5 + cal6 + cal7 + cal8 + cal9 + cal10)/c);
     // for (let i = 0; i < calificaciones.length; i++) {
     //     resultado = resultado + calificaciones[i]
     // }
     // let prom = resultado / calificaciones.length;
     result4.innerText = "El promedio de calificaciones del grupo es: " + resultado2; 
-    console.log("El promedio de califincaciones del grupo es: " + resultado2);
+    //console.log("El promedio de califincaciones del grupo es: " + resultado2);
 }
 
 // promedio([3,4,5,4.5,3.8]);
@@ -172,113 +176,123 @@ function promedio2(){
 
 // 5. Se desea obtener el promedio de g grupos que están en un mismo año escolar; siendo que cada grupo puede tener n alumnos que cada alumno puede llevar m materias y que en todas las materias se promedian tres calificaciones para obtener el promedio de la materia. Lo que se desea desplegar es el promedio de los grupos, el promedio de cada grupo y el promedio de cada alumno.
 
-function promedioGrupos(grupos){
-    function promedioGrupos(grupos){
-        grupos = [];
-        for (let i = 0; i < grupos.length; i++) {
-            const grupos = grupos.array[i];
-        }
-        function alumno(materias){
+const gaa1m1c1 = document.getElementById('gaa1m1c1');
+const gaa1m1c2 = document.getElementById('gaa1m1c2');
+const gaa1m1c3 = document.getElementById('gaa1m1c3');
+const gaa1m2c1 = document.getElementById('gaa1m2c1');
+const gaa1m2c2 = document.getElementById('gaa1m2c2');
+const gaa1m2c3 = document.getElementById('gaa1m2c3');
+const gaa2m1c1 = document.getElementById('gaa2m1c1');
+const gaa2m1c2 = document.getElementById('gaa2m1c2');
+const gaa2m1c3 = document.getElementById('gaa2m1c3');
+const gaa2m2c1 = document.getElementById('gaa2m2c1');
+const gaa2m2c2 = document.getElementById('gaa2m2c2');
+const gaa2m2c3 = document.getElementById('gaa2m2c3');
+const gba1m1c1 = document.getElementById('gba1m1c1');
+const gba1m1c2 = document.getElementById('gba1m1c2');
+const gba1m1c3 = document.getElementById('gba1m1c3');
+const gba1m2c1 = document.getElementById('gba1m2c1');
+const gba1m2c2 = document.getElementById('gba1m2c2');
+const gba1m2c3 = document.getElementById('gba1m2c3');
+const gba2m1c1 = document.getElementById('gba2m1c1');
+const gba2m1c2 = document.getElementById('gba2m1c2');
+const gba2m1c3 = document.getElementById('gba2m1c3');
+const gba2m2c1 = document.getElementById('gba2m2c1');
+const gba2m2c2 = document.getElementById('gba2m2c2');
+const gba2m2c3 = document.getElementById('gba2m2c3');
 
-            function materia(calificaciones){
-            let sumaCalificaciones;
-            for (let i = 0; i < calificaciones.length; i++) {
-                sumaCalificaciones = sumaCalificaciones + calificaciones[i]
-            }
-            let promedioMateria = sumaCalificaciones / calificaciones.length
-            return promedioMateria
-            }
+const promedios = document.getElementById('calc-promedios');
+promedios.addEventListener('click', promAlumnos);
+const resultado5 = document.getElementById('result5');
 
-            let sumaMaterias;
-            for (let i = 0; i < materias.length; i++) {
-                sumaMaterias = sumaMaterias + materias[i]
-            }
-            let promedioAlumno = sumaCalificaciones / materias.length
-            return promedioAlumno
-            // console.log("El promedio del alumno es: " + promedioAlumno)
-        }
+function promAlumnos(){
+    let aga1m1c1 = Number(gaa1m1c1.value);
+    let aga1m1c2 = Number(gaa1m1c2.value);
+    let aga1m1c3 = Number(gaa1m1c3.value);
+    let aga1m2c1 = Number(gaa1m2c1.value);
+    let aga1m2c2 = Number(gaa1m2c2.value);
+    let aga1m2c3 = Number(gaa1m2c3.value);
 
-    }
+    let promAl1G1 = (aga1m1c1+aga1m1c2+aga1m1c3+aga1m2c1+aga1m2c2+aga1m2c3)/6;
+
+    let aga2m1c1 = Number(gaa2m1c1.value);
+    let aga2m1c2 = Number(gaa2m1c2.value);
+    let aga2m1c3 = Number(gaa2m1c3.value);
+    let aga2m2c1 = Number(gaa2m2c1.value);
+    let aga2m2c2 = Number(gaa2m2c2.value);
+    let aga2m2c3 = Number(gaa2m2c3.value);
+
+    let promAl2G1 = (aga2m1c1+aga2m1c2+aga2m1c3+aga2m2c1+aga2m2c2+aga2m2c3)/6;
+
+    let bga1m1c1 = Number(gba1m1c1.value);
+    let bga1m1c2 = Number(gba1m1c2.value);
+    let bga1m1c3 = Number(gba1m1c3.value);
+    let bga1m2c1 = Number(gba1m2c1.value);
+    let bga1m2c2 = Number(gba1m2c2.value);
+    let bga1m2c3 = Number(gba1m2c3.value);
+
+    let promAl1GB = (bga1m1c1+bga1m1c2+bga1m1c3+bga1m2c1+bga1m2c2+bga1m2c3)/6;
+
+    let bga2m1c1 = Number(gba2m1c1.value);
+    let bga2m1c2 = Number(gba2m1c2.value);
+    let bga2m1c3 = Number(gba2m1c3.value);
+    let bga2m2c1 = Number(gba2m2c1.value);
+    let bga2m2c2 = Number(gba2m2c2.value);
+    let bga2m2c3 = Number(gba2m2c3.value);
+
+    let promAl2GB = (bga2m1c1+bga2m1c2+bga2m1c3+bga2m2c1+bga2m2c2+bga2m2c3)/6;
+
+    let promGA = (promAl1G1+promAl2G1)/2;
+    let promGB = (promAl1GB+promAl2GB)/2;
+    let promGrupos = (promGA+promGB)/2;
+
+    resultado5.innerHTML+='El promedio del grupo A es: ' + promGA + '<br>';
+    resultado5.innerHTML+='El promedio del grupo B es: ' + promGB + '<br>';
+    resultado5.innerHTML+='El promedio del Alumno 1 del grupo A es: ' + promAl1G1 + '<br>';
+    resultado5.innerHTML+='El promedio del Alumno 2 del grupo A es: ' + promAl2G1 + '<br>';
+    resultado5.innerHTML+='El promedio del Alumno 1 del grupo B es: ' + promAl1GB + '<br>';
+    resultado5.innerHTML+='El promedio del Alumno 2 del grupo B es: ' + promAl2GB + '<br>';
+    resultado5.innerHTML+='El promedio de los grupos es: '+ promGrupos;
 }
-
-// calificaciones1 = [3,4,5];
-// calificaciones2 = [3,4,5];
-// calificaciones3 = [4,4,5];
-// calificaciones4 = [5,4,5];
-
-
-// Forma 2:
-
-function Grupos(grupo){
-    this.grupo = grupo
-}
-
-function Grupo(alumno){
-    this.nombre = nombre;
-}
-
-function Alumno(materia){
-    this.materia = materia;
-}
-
-function Materia(calificacion){
-    this.calificacion = calificacion;
-}
-
-function Calificaciones(calificacion){
-    this.calificacion = calificacion
-}
-
-function promedioCalificacionesMateria (a,b,c){
-    let promedio = a+b+c
-}
-
-/*
-Algoritmo detarea
-	Definir a,b,c Como Entero
-	Definir suma1,suma2,suma3,c1,c2,c3 Como Real
-	Escribir "Ingresa el total de grupos"
-	leer grupos
-	suma3 = 0
-	para a = 1 Hasta grupos Con Paso 1 Hacer
-		Escribir "Ingresa el total de alumnos"
-		leer alumnos
-		suma2 = 0
-		para b = 1 Hasta alumnos Con Paso 1 Hacer
-			Escribir "Ingresa el total de materias"
-			leer materias
-			suma1 = 0
-			para c = 1 Hasta  materias Con Paso 1 Hacer
-				Escribir "Ingresa las calificaciones: "
-				leer c1,c2,c3
-				suma1 = suma1 + (c1+c2+c3)/3
-			FinPara
-			Escribir "El promedio del alumno ",b," es: ",suma1/materias
-			suma2 = suma2 + (suma1/materias)
-		FinPara
-		Escribir "El promedio del grupo ",a," es: ",suma2/alumnos
-		suma3 = suma3 + (suma2/alumnos)
-	FinPara
-	Escribir "El promedio de los ",grupos," grupos es: ",suma3/grupos
-FinAlgoritmo
-*/
-
-//PREGUNTAR!!!
 
 // 6. Una persona que va de compras a la tienda “la rebaja.”, decide llevar un control sobre lo que va comprando, para saber la cantidad de dinero que tendrá que pagar al llegar a la caja. La tienda tiene una promoción del 20% de descuento sobre aquellos artículos cuya etiqueta sea roja. Determinar la cantidad de dinero que esta persona deberá pagar.
 
-function pagar(articulos, valorArticulo, descuento){
-    if(descuento === true){
-        valorArticulo = (valorArticulo * 0,80)
-    }
-    let valorTotal
-    for (let i = 0; i < articulos.length; i++) {
-        const element = valorTotalarray[i];
+const resultado6 = document.getElementById('result6');
+const siNoDesc = document.getElementById('sinodesc');
+const siNoDesc2 = document.getElementById('sinodesc2');
+const sd1 = document.getElementById('sd1');
+const sd2 = document.getElementById('sd2');
+const sd3 = document.getElementById('sd3');
+const sd4 = document.getElementById('sd4');
+const sd5 = document.getElementById('sd5');
+const cd1 = document.getElementById('cd1');
+const cd2 = document.getElementById('cd2');
+const cd3 = document.getElementById('cd3');
+const cd4 = document.getElementById('cd4');
+const cd5 = document.getElementById('cd5');
 
-    }
+
+siNoDesc.addEventListener('keypress', subtotal);
+siNoDesc2.addEventListener('keypress', subtotal);
+siNoDesc.addEventListener('click', subtotal);
+siNoDesc2.addEventListener('click', subtotal);
+
+
+function subtotal(){
+    let sin1 = Number(sd1.value);
+    let sin2 = Number(sd2.value);
+    let sin3 = Number(sd3.value);
+    let sin4 = Number(sd4.value);
+    let sin5 = Number(sd5.value);
+    let con1 = Number(cd1.value);
+    let con2 = Number(cd2.value);
+    let con3 = Number(cd3.value);
+    let con4 = Number(cd4.value);
+    let con5 = Number(cd5.value);
+    
+    let total = ((sin1+sin2+sin3+sin4+sin5)+((con1+con2+con3+con4+con5)*0.8));
+    resultado6.innerText='El Subtotal es: ' + total;
 }
-//PREGUNTAR!!!
-
 // 7. Calcular la suma siguiente:
 // 	100 + 98 + 96 + 94 + . . . + 0 en este orden
 
